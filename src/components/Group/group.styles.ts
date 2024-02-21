@@ -2,52 +2,53 @@ import styled from '@emotion/styled'
 
 export const GroupWrapper = styled.div`
   width: 100%;
-`
 
-export const GroupButton = styled.button`
-  display: inline-flex;
-  justify-content: start;
-  align-items: center;
-  width: 100%;
-  position: relative;
-
-  .group-list {
-    display: flex;
+  button {
+    position: relative;
+    display: inline-flex;
     justify-content: start;
     align-items: center;
-    margin-left: 45px;
+    width: 100%;
 
-    &.is-active {
-      margin-right: 17px;
+    .group-list {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-left: 45px;
+
+      &.is-active {
+        margin-right: 17px;
+      }
     }
-  }
 
-  strong {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 36px;
-  }
+    strong {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 36px;
+    }
 
-  svg {
-    display: inline-block;
-  }
+    svg {
+      display: inline-block;
+    }
 
-  .fold {
-    position: absolute;
-    left: 27px;
-    top: 0;
+    .ic-fold {
+      position: absolute;
+      left: 27px;
+      top: 0;
+      transition: transform 200ms linear;
 
-    &.is-active {
-      transform: rotate(90deg);
-      margin-right: -18px;
+      &.is-active {
+        transform: rotate(90deg);
+        margin-right: -18px;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    .ic-file {
       position: relative;
-      top: 1px;
+      top: 3px;
     }
-  }
-
-  .file {
-    position: relative;
-    top: 3px;
   }
 `
 
@@ -58,6 +59,7 @@ export const SubItem = styled.div`
   li {
     width: 100%;
     height: 38px;
+    transition: background-color 200ms ease-in-out;
 
     &:hover {
       background-color: #ffe7e7;
@@ -76,9 +78,10 @@ export const SubItem = styled.div`
         text-align: center;
         font-weight: 400;
         line-height: 36px;
+        transition: color 100ms ease-in-out;
 
         &:hover {
-          color: black;
+          color: #000000;
         }
       }
     }
