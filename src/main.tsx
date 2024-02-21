@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { List } from './components'
+import { List } from './pages/List/list.tsx'
 import { Global } from '@emotion/react'
 import { GlobalStyles } from './globalStyles.ts'
 
