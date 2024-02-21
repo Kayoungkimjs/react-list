@@ -8,6 +8,7 @@ export const GlobalStyles = css`
   * {
     font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;
     margin: 0;
+    color: #757575;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
@@ -18,6 +19,7 @@ export const GlobalStyles = css`
   }
 
   body {
+    font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;
     color: #757575;
     background-color: #aaaaaa;
   }
