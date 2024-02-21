@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getItemsList } from '../../../public'
-import { ItemListResponse } from '../../../types/items'
+import { ItemListResponse } from '@/types/items'
 import { AxiosResponse } from 'axios'
 import { ItemList } from './item.styles'
 

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import { ReactComponent as IconFile } from '../../assets/images/ic-file.svg'
-import { ReactComponent as IconFold } from '../../assets/images/ic-fold.svg'
+import { ReactComponent as IconFile } from '@/assets/images/ic-file.svg'
+import { ReactComponent as IconFold } from '@/assets/images/ic-fold.svg'
 import { getGroupList } from '../../../public'
-import { GroupListResponse } from '../../../types/group'
+import { GroupListResponse } from '@/types/group'
 import { AxiosResponse } from 'axios'
-import { GroupButton, GroupWrapper, SubItem } from './group.styles'
+import { GroupWrapper, SubItem } from './group.styles'
 
 export const Group = () => {
   const [groupList, setGroupList] = useState<GroupListResponse[]>([])
@@ -35,10 +35,10 @@ export const Group = () => {
   return (
     <>
       {Object.values(groupList).map((item, index) => (
-        <GroupWrapper key={index}>
+        <GroupWrapper>
           <ol>
-            <li>
-              <GroupButton
+            <li key={index}>
+              <button
                 type="button"
                 onClick={() => {
                   toggleUserMenu(index)
@@ -46,19 +46,23 @@ export const Group = () => {
               >
                 {!item.isEmpty &&
                   (openStates[index] ? (
-                    <IconFold className="fold is-active" viewBox="-2 0 50 15" />
+                    <IconFold
+                      className="ic-fold is-active"
+                      viewBox="-2 0 50 15"
+                    />
                   ) : (
-                    <IconFold className="fold" viewBox="0 0 50 50" />
+                    <IconFold className="ic-fold" viewBox="0 0 50 50" />
                   ))}
+
                 <div
                   className={`group-list ${
                     !item.isEmpty && openStates[index] ? 'is-active' : ''
                   }`}
                 >
-                  <IconFile className="file" viewBox="0 0 50 50" />
+                  <IconFile className="ic-file" viewBox="0 0 50 50" />
                   <strong>Group{item.index}</strong>
                 </div>
-              </GroupButton>
+              </button>
             </li>
           </ol>
 
