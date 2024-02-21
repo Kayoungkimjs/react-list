@@ -1,0 +1,102 @@
+[
+  {
+    "index": 1,
+    "name": "Group1",
+    "isEmpty": false,
+    "items": [
+      {
+        "id": 1,
+        "name": "Item1"
+      },
+      {
+        "id": 2,
+        "name": "Item2"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "name": "Group2",
+    "isEmpty": false,
+    "items": [
+      {
+        "id": 1,
+        "name": "Item1"
+      },
+      {
+        "id": 2,
+        "name": "Item2"
+      },
+      {
+        "id": 3,
+        "name": "Item3"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "name": "Group3",
+    "isEmpty": true,
+    "items": null
+  },
+  {
+    "index": 4,
+    "name": "Group4",
+    "isEmpty": false,
+    "items": [
+      {
+        "id": 1,
+        "name": "Item1"
+      },
+      {
+        "id": 2,
+        "name": "Item2"
+      },
+      {
+        "id": 3,
+        "name": "Item3"
+      },
+      {
+        "id": 4,
+        "name": "Item4"
+      },
+      {
+        "id": 5,
+        "name": "Item5"
+      },
+      {
+        "id": 6,
+        "name": "Item6"
+      },
+      {
+        "id": 7,
+        "name": "Item7"
+      },
+      {
+        "id": 8,
+        "name": "Item8"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "name": "Group 5",
+    "isEmpty": true,
+    "items": null
+  },
+  {
+    "index": 6,
+    "name": "Group 6",
+    "isEmpty": false,
+    "items": [
+      {
+        "id": 1,
+        "name": "Item1"
+      },
+      {
+        "id": 2,
+        "name": "Item2"
+      }
+    ]
+  }
+]
