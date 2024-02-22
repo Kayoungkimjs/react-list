@@ -34,39 +34,38 @@ export const Group = () => {
 
   return (
     <>
-      {Object.values(groupList).map((item, index) => (
-        <GroupWrapper>
+      {groupList.map((item) => (
+        <GroupWrapper key={item.index}>
           <ol>
-            <li key={index}>
+            <li>
               <button
                 type="button"
                 onClick={() => {
-                  toggleUserMenu(index)
+                  toggleUserMenu(item.index)
                 }}
               >
-                {!item.isEmpty &&
-                  (openStates[index] ? (
-                    <IconFold
-                      className="ic-fold is-active"
-                      viewBox="-2 0 50 15"
-                    />
-                  ) : (
-                    <IconFold className="ic-fold" viewBox="0 0 50 50" />
-                  ))}
+                {!item.isEmpty && (
+                  <IconFold
+                    className={`ic-fold ${
+                      openStates[item.index] ? 'is-active' : ''
+                    }`}
+                    viewBox="-2 0 50 15"
+                  />
+                )}
 
                 <div
                   className={`group-list ${
-                    !item.isEmpty && openStates[index] ? 'is-active' : ''
+                    !item.isEmpty && openStates[item.index] ? 'is-active' : ''
                   }`}
                 >
                   <IconFile className="ic-file" viewBox="0 0 50 50" />
-                  <strong>Group{item.index}</strong>
+                  <strong>{item.name}</strong>
                 </div>
               </button>
             </li>
           </ol>
 
-          {!item.isEmpty && openStates[index] && (
+          {!item.isEmpty && openStates[item.index] && (
             <SubItem>
               <ol>
                 {item.items.map((subItem, subIndex) => (
