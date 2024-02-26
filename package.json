@@ -16,7 +16,8 @@
     "axios": "^1.6.7",
     "emotion-normalize": "^11.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.1"
   },
   "devDependencies": {
     "@svgr/rollup": "^8.1.0",

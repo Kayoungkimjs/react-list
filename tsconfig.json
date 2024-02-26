@@ -26,6 +26,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "svg.d.ts", "public/index.tsx"],
+  "include": ["src", "svg.d.ts", "public/index.tsx", "src/styles/utils"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
