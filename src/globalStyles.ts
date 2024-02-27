@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import emotionNormalize from 'emotion-normalize'
-import { visuallyHidden } from './utils/a11y'
+import { visuallyHidden } from './styles/utils/a11y'
 
 export const GlobalStyles = css`
   ${emotionNormalize}
