@@ -1,10 +1,8 @@
 import styled from '@emotion/styled'
+import { columnFlexbox } from '@/styles/utils/flexbox'
 
 export const ItemList = styled.ol`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  ${columnFlexbox('start')};
   width: 100%;
   margin-left: 45px;
 
