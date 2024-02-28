@@ -5,24 +5,17 @@ import { getGroupList } from '../../../public'
 import { GroupListResponse } from '@/types/group'
 import { AxiosResponse } from 'axios'
 import { GroupWrapper, SubItem } from './group.styles'
+import { useOpenStatesStore } from '@/stores/groups'
 
 export const Group = () => {
   const [groupList, setGroupList] = useState<GroupListResponse[]>([])
-  const [openStates, setOpenStates] = useState<boolean[]>([])
 
-  const toggleUserMenu = (index: number) => {
-    setOpenStates((prev) => {
-      const newOpenStates = [...prev]
-      newOpenStates[index] = !newOpenStates[index]
-      return newOpenStates
-    })
-  }
+  const { openMenu, toggleMenu } = useOpenStatesStore()
 
   const fetchGroupList = async () => {
     try {
       const result: AxiosResponse<GroupListResponse[]> = await getGroupList()
       setGroupList(result.data)
-      setOpenStates(new Array(result.data.length).fill(false))
     } catch (error) {
       console.log(error)
     }
@@ -41,13 +34,13 @@ export const Group = () => {
               <button
                 type="button"
                 onClick={() => {
-                  toggleUserMenu(item.index)
+                  toggleMenu(item.index)
                 }}
               >
                 {!item.isEmpty && (
                   <IconFold
                     className={`ic-fold ${
-                      openStates[item.index] ? 'is-active' : ''
+                      openMenu[item.index] ? 'is-active' : ''
                     }`}
                     viewBox="-2 0 50 15"
                   />
@@ -55,7 +48,7 @@ export const Group = () => {
 
                 <div
                   className={`group-list ${
-                    !item.isEmpty && openStates[item.index] ? 'is-active' : ''
+                    !item.isEmpty && openMenu[item.index] ? 'is-active' : ''
                   }`}
                 >
                   <IconFile className="ic-file" viewBox="0 0 50 50" />
@@ -65,7 +58,7 @@ export const Group = () => {
             </li>
           </ol>
 
-          {!item.isEmpty && openStates[item.index] && (
+          {!item.isEmpty && openMenu[item.index] && (
             <SubItem>
               <ol>
                 {item.items.map((subItem, subIndex) => (
