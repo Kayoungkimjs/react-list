@@ -1,5 +1,4 @@
-import { Group } from '@components/Group/group'
-import { Item } from '@components/Item/item'
+import { Group, Item } from '@/components'
 import { Container, ListWrapper } from './list.styles'
 
 export const List = () => {
@@ -12,3 +11,5 @@ export const List = () => {
     </Container>
   )
 }
+
+export default List
