@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { List } from './pages/List/list.tsx'
 import { Global } from '@emotion/react'
 import { GlobalStyles } from './globalStyles.ts'
+import Router from './Routes.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Global styles={GlobalStyles} />
-    <List />
+    <Router />
   </React.StrictMode>
 )
